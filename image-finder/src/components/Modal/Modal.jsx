@@ -33,8 +33,7 @@ export default function Modal({largeImg, onClose, tag}) {
   };
   return createPortal(
     <div className={s.backdrop} onClick={handelBackDropClick}>
-      <div className={s.content}>
-        {this.props.children}
+      <div className={s.content}>       
         <img src={largeImg} alt={tag} />
       </div>
     </div>,
