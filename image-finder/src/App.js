@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback} from "react";
 import imgApi from './services/imgApi.jsx';
 import Searchbar from './components/Searchbar';
 import ImageGallery from './components/ImageGallery';
@@ -6,6 +6,7 @@ import Button from './components/Button';
 import Modal from './components/Modal';
 import ComponentLoader from './components/Loader';
 import { MdClose } from "react-icons/md";
+import { ToastContainer } from 'react-toastify';
 
 const App = () => {
   const [hits, setHits] = useState([]);
@@ -83,6 +84,17 @@ const App = () => {
           </button>
         </Modal>
       )}
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 }
